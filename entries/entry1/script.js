@@ -109,3 +109,10 @@ function showGame(gameId) {
   window.addEventListener("resize", adjustSidenavPosition);
   adjustSidenavPosition();
   
+  function createTextCursor(event){
+    let el = document.getElementById("hoveringText");
+      el.style.top = event.clientY + "px";
+      el.style.left = event.clientX + "px";
+  }
+  
+  document.getElementById("main").addEventListener('mousemove', createTextCursor);
