@@ -11,7 +11,7 @@
   
     "note": "MY COVID-19 LOCKDOWN LIFE SAVER",
   
-    "source": "animal-crossing.jpg",
+    "source": "./assets/animal-crossing.jpg",
 
     "number": 1
     
@@ -29,7 +29,7 @@
     
       "note": "The bugs in the physics engine can be a bit amusing at times, but my friend and I are thoroughly enjoying excavating the crusts and cores of each planet.",
     
-      "source": "astroneer.jpg",
+      "source": "./assets/astroneer.jpg",
 
       "number": 2
       
