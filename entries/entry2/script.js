@@ -49,7 +49,7 @@ if (screenWidth >= 768) {
     img.innerHTML = `
     <div class="image-container">
       <img src="./assets/${game.source}" class="original-img" object-fit: cover; object-position: center center;">
-      <img src="./assets/${game.source.replace(/\.\w+$/, 'G.JPG')}" class="filtered-img" object-fit: cover; object-position: center center;">
+      <img src="./assets/${game.source.replace(/\.\w+$/, 'G.jpg')}" class="filtered-img" object-fit: cover; object-position: center center;">
   </div>
   `
 
