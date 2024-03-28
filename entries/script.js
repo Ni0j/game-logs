@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function (){
     gameElement.innerHTML = `
     <div class="image-container">
       <img src="./entries/assets/${game.source}" class="original-img" style="width: 19.375rem;height: 10.886rem; object-fit: cover; object-position: center center;">
-      <img src="./entries/assets/${game.source.replace(/\.\w+$/, 'G.jpg')}" class="filtered-img" style="width: 19.375rem;height: 10.886rem; object-fit: cover; object-position: center center;">
-  </div>
+      <img src="./assets/${game.source.replace(/\.\w+$/, 'G.jpg')}" class="filtered-img" style="width: 19.375rem;height: 10.886rem; object-fit: cover; object-position: center center;">
+    </div>
       <div class="text-block">
         <h2>${paddedNumber} » ${game.name}</h2>
         <p>Platform: <i>${game.platform ? game.platform : ''}</i></p>
