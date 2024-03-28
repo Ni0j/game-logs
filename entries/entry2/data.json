@@ -1,0 +1,597 @@
+[
+  {
+  
+    "name": "Animal Crossing",
+
+    "hrsPlayed": 840,
+  
+    "platform": "Nintendo Switch",
+  
+    "genre": ["AVG", "Social Simulation"],
+  
+    "note": "MY COVID-19 LOCKDOWN LIFE SAVER",
+  
+    "source": "animal-crossing.jpg",
+
+    "number": 101
+    
+    },
+    
+  {
+  
+      "name": "Astroneer",
+    
+      "hrsPlayed": 64.9,
+    
+      "platform": "PC",
+      
+      "genre": ["Sandbox", "AVG"],
+    
+      "note": "The bugs in the physics engine can be a bit amusing at times, but my friend and I are thoroughly enjoying excavating the crusts and cores of each planet.",
+    
+      "source": "astroneer.jpg",
+
+      "number": 102
+      
+  },
+
+  {
+  
+    "name": "Axiom Verge",
+  
+    "hrsPlayed": 2,
+    
+    "platform": "PC",
+  
+    "genre": ["Metroidvania", "Shooting", "AVG"],
+  
+    "note": "Bought this game because I was drawn to Elsenova's visual design.",
+  
+    "source": "axiom-verge.jpeg",
+
+    "number": 103
+    
+    },
+
+    {
+  
+      "name": "Baldur’s Gate 3",
+      
+      "hrsPlayed": 2.6,
+      
+      "platform": "PC",
+      
+      "genre": ["SRPG", "AVG"],
+      
+      "note": "Good game, just we lack chemistry.",
+    
+      "source": "baldursgate.jpeg",
+      
+      "number": 104
+      
+      },
+
+  {
+  
+   "name": "BOKURA",
+      
+  "hrsPlayed": 32.8,
+        
+   "platform": "PC",
+        
+   "genre": ["Puzzle", "AVG"],
+        
+   "note": "guess why 32.8 hrs, this games cant saved your progress",
+      
+   "source": "bokura.jpeg",
+
+   "number": 105
+        
+  },
+
+  {
+  
+    "name": "Carrion",
+    
+    "hrsPlayed": 13.4,
+    
+    "platform": "PC",
+    
+    "genre": ["Horror", "Indie", "AAVG"],
+    
+    "note": "A good game to relieve stress and let off steam when you're angry.",
+  
+    "source": "carrion.jpg",
+
+    "number": 106
+    
+    },
+
+    {
+  
+      "name": "Code Vein",
+    
+      "hrsPlayed": 62.3,
+    
+      "platform": "PC",
+    
+      "genre": ["ARPG", "Soulslike"],
+    
+      "note": "",
+    
+      "source": "code-vein.png",
+
+      "number": 107
+    
+      },
+
+      {
+  
+        "name": "Critters for Sale",
+        
+        "hrsPlayed": 2.1,
+        
+        "platform": "PC",
+        
+        "genre": ["AVG", "Indie"],
+        
+        "note": "didn’t finish, but like the entire mood and the visual qulity",
+      
+        "source": "crittersforsale.jpeg",
+
+        "number": 108
+        
+        },
+
+        {
+  
+          "name": "Cultist Simulator",
+          
+          "hrsPlayed": 32.3,
+          
+          "platform": "PC",
+          
+          "genre": ["Simulation", "Indie", "RPG", "AVG", "Strategy"],
+        
+          "note": "guess why 32.8 hrs, this games cant saved your progress",
+        
+          "source": "cultist-simulator.png",
+
+          "number": 109
+          
+          },
+
+          {
+  
+            "name": "Danganronpa V3: Killing Harmony",
+            
+            "hrsPlayed": 31,
+            
+            "platform": "PC",
+            
+            "genre": ["Visual Novel", "AVG"],
+            
+            "note": "Still love these types of detective games, and I'm enjoying the twists and turns in the cases much more this version as well",
+          
+            "source": "Danganronpa-V3-Killing-Harmony.jpg",
+
+            "number": 110
+            
+            },
+
+            {
+
+              "name": "Don't Starve Together",
+              
+              "hrsPlayed": 22.6,
+              
+              "platform": "PC",
+              
+              "genre": ["Fighting", "Indie", "RPG"],
+              
+              "note": "classic",
+            
+              "source": "dontstarve.jpg",
+
+              "number": 111
+              
+              },
+
+              {
+  
+                "name": "Dungeon N Fighter",
+              
+                "hrsPlayed": 152,
+              
+                "platform": "PC",
+              
+                "genre": ["MMORPG"],
+              
+                "note": "Although I had seen people playing it when I was a kid, the first time I played it was during the pandemic, and I still didn't have the energy to continue after a month or so.",
+              
+                "source": "dungeon-n-fighters.jpeg",
+
+                "number": 112
+              
+                },
+
+                {
+  
+                  "name": "Final Fantasy VII REMAKE INTERGRADE",
+                  
+                  "hrsPlayed": 8.1,
+                  
+                  "platform": "PC",
+                  
+                  "genre": ["JRPG", "AVG"],
+                  
+                  "note": "Dedicated to Claude, who I think this guy is so hot with at first sight in second grade.",
+                  
+                  "source": "ffviir.jpeg",
+
+                  "number": 113
+                  
+                  },
+
+  {
+  
+  "name": "Final Fantasy XIV",
+
+  "hrsPlayed": 5870,
+
+  "platform": "PC",
+
+  "genre": ["MMORPG"],
+
+  "note": "7.0 WHEN",
+
+  "source": "final-fantasy.jpg",
+
+  "number": 114
+  
+  },
+  
+  {
+  
+  "name": "Final Fantasy XV",
+  
+  "hrsPlayed": 6.9,
+  
+  "platform": "PC",
+  
+  "genre": ["Fighting", "ARPG", "AAVG"],
+
+  "note": "Dedicated to Claude, who I think this guy is so hot with at first sight in second grade.",
+  
+  "source": "final-fantasy-xv.jpg",
+
+  "number": 115
+  
+  },
+
+  {
+  
+  "name": "GOROGOA",
+  
+  "hrsPlayed": 1,
+  
+  "platform": "Nintendo Switch",
+  
+  "genre": ["Puzzle", "Indie", "AVG"],
+  
+  "note": "ART PIECE",
+
+  "source": "gorogoa.jpg",
+
+  "number": 116
+  
+  },
+
+  {
+  
+  "name": "Guilty Gear -Strive-",
+  
+  "hrsPlayed": 8.6,
+  
+  "platform": "PC",
+  
+  "genre": ["Fighting", "Action"],
+  
+  "note": "TOP 1 FTG",
+
+  "source": "guiltyGearStrive.png",
+
+  "number": 117
+  
+  },
+
+  {
+  
+  "name": "Heretic’s Fork",
+
+  "hrsPlayed": 4,
+  
+  "platform": "PC",
+  
+  "genre": "Action, Strategy",
+
+  "note": "Bought this game because I was drawn to Elsenova's visual design.",
+
+  "source": "HF.jpg",
+
+  "number": 118
+  
+  },
+
+  {
+  
+    "name": "Iris Fall",
+    
+    "hrsPlayed": 2.7,
+    
+    "platform": "PC",
+    
+    "genre": ["Puzzle", "AVG", "Indie"],
+    
+    "note": "short but delicate",
+  
+    "source": "iris-fall.webp",
+
+    "number": 119
+    
+    },
+
+  {
+  
+  "name": "It takes two",
+  
+  "hrsPlayed": 15.8,
+  
+  "platform": "PC",
+  
+  "genre": ["AAVG", "Puzzle"],
+  
+  "note": "what can i say",
+
+  "source": "ittakestwo.jpeg",
+
+  "number": 120
+  
+  },
+  
+  {
+  
+  "name": "League of Legends",
+
+  "hrsPlayed": 301,
+
+  "platform": "PC",
+
+  "genre": ["MOBA", "ARPG"],
+
+  "note": "",
+
+  "source": "league-of-legends.jpg",
+
+  "number": 121
+  
+  },
+  
+  {
+  
+  "name": "Lost Ark",
+
+  "hrsPlayed": 178.6,
+
+  "platform": "PC",
+
+  "genre": ["MMORPG"],
+
+  "note": "Played for a month last summer.IMO better battle experience and classes than FFXIV, and that all the pros",
+
+  "source": "lost-ark.jpeg",
+
+  "number": 122
+  
+  },
+
+  {
+  
+  "name": "NieR Automata",
+
+  "hrsPlayed": 35.8,
+
+  "platform": "PC",
+
+  "genre": "ARPG",
+
+  "note": "",
+
+  "source": "nier-automata.jpg",
+
+  "number": 123
+  
+  },
+
+  {
+  
+  "name": "NieR Replicant Ver. 1.22474487139",
+  
+  "hrsPlayed": 17.6,
+  
+  "platform": "PC",
+  
+  "genre": ["ARPG", "Fighting", "AVG", "Shooting"],
+
+  "note": "classic",
+
+  "source": "nier-replicant.jpg",
+
+  "number": 124
+  
+  },
+
+  {
+  
+  "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
+  
+  "hrsPlayed": 12.5,
+  
+  "platform": "PC",
+  
+  "genre": ["AVG", "Horror", "Visual Novel", "RPG"],
+
+  "note": "A good game to relieve stress and let off steam when you’re angry.",
+
+  "source": "honjo.webp",
+  
+  "number": 125
+  
+  },
+
+  {
+  
+  "name": "Return of the Obra Dinn",
+  
+  "hrsPlayed": 1.1,
+  
+  "platform": "PC",
+  
+  "genre": ["AVG", "Puzzle", "Indie"],
+
+  "note": "",
+
+  "source": "reture-of-the-obra-dinn.png",
+  
+  "number": 126
+  
+  },
+
+  
+  {
+  
+  "name": "Splatoon2",
+
+  "hrsPlayed": 220,
+
+  "platform": "Nintendo Switch",
+
+  "genre": ["Shooting"],
+
+  "note": "Looking back on the last fest for splatoon2's in 2019, I feel so nostalgic thinking back to a lot of my high school days. Haven't played in a long time now though",
+
+  "source": "splatoon2.jpg",
+
+  "number": 127
+  
+  },
+
+  {
+  
+    "name": "Splatoon3",
+  
+    "hrsPlayed": 65,
+  
+    "platform": "Nintendo Switch",
+  
+    "genre": ["Shooting"],
+  
+    "note": "I love chainsaw but overall I still prefer Splattoon 2's ults",
+  
+    "source": "splatoon3.jpg",
+
+    "number": 128
+    
+    },
+  
+  {
+  
+  "name": "Stellaris",
+  
+  "hrsPlayed": 20.2,
+  
+  "platform": "PC",
+  
+  "genre": ["4X", "Simulation", "Strategy"],
+    
+  "note": "classic",
+
+  "source": "stellaris.jpeg",
+
+  "number": 129
+  
+  },
+
+  {
+  
+  "name": "The Coffin of Andy and Leyley",
+  
+  "hrsPlayed": 3.7,
+  
+  "platform": "PC",
+  
+  "genre": ["Horror", "RPG", "AVG"],
+
+  "note": "Dedicated to Claude, who I think this guy is so hot with at first sight in second grade.",
+  
+  "source": "The_Coffin_of_Andy_and_Leyley_Banner.png",
+
+  "number": 130
+  
+  },
+  
+  {
+  
+  "name": "The Legend of Zelda: Breath of the Wild",
+  
+  "hrsPlayed": 10,
+  
+  "platform": "Nintendo Switch",
+  
+  "genre": ["Puzzle", "AAVG", "Fighting", "Shooting", "ARPG"],
+  
+  "note": "Lynel is so freaking scary",
+
+  "source": "zelda.jpg",
+
+  "number": 131
+  
+  },
+  
+  {
+  
+  "name": "what remains of edith finch",
+  
+  "hrsPlayed": 0.5,
+  
+  "platform": "PC",
+  
+  "genre": "Walking Simulator, AVG",
+  
+  "note": "ART PIECE but sorry Im Motion Sickness",
+
+  "source": "what-remains.jpeg",
+
+  "number": 132
+  
+  },
+
+  {
+  
+  "name": "who's lila",
+  
+  "hrsPlayed": 3.3,
+  
+  "platform": "PC",
+  
+  "genre": ["AVG", "Indie", "RPG"],
+
+  "note": "Dedicated to Claude, who I think this guy is so hot with at first sight in second grade.",
+  
+  "source": "whoslila.jpeg",
+
+  "number": 133
+  
+  }
+
+]
