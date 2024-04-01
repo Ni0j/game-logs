@@ -101,6 +101,7 @@ pElement.style.paddingTop = '0.75rem';
     <div class="text-block">
         <span class="game-title">${game.name}</span>
         <p>Platform: <i>${game.platform ? game.platform : ''}</i></p>
+        <p>Genre: <i>${game.genre ? game.genre : ''}</i></p>
         <p>Playtime: <i>${game.hrsPlayed ? game.hrsPlayed : ''} </i>Hours</p>
         <p>Comment: <i>${game.note ? game.note : ''}</i></p>
       </div>

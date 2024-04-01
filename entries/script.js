@@ -1,111 +1,44 @@
-document.addEventListener("DOMContentLoaded", function (){
-  fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
+const fonts = [
+  "vm74", "Times New Roman", "niagara", "peregroy-jf",
+  "thrillers", "Tahoma", "miller-headline", "Impact",
+  "Lucida Sans Unicode", "Trebuchet MS", "Palatino Linotype",
+  "Book Antiqua", "p22-frenzy", "Garamond", "Consolas",
+  'unknown', "responder-p", "Lucida Console", "new-science-extended",
+  "Calibri", "Candara", "Geneva", "Optima", "t26-carbon"
+];
 
-  const gameData = data;
-  const gameContainerMetro = document.getElementById('game-container-metro');
-
-
-  gameData.forEach(game => {
-    const gameElement = document.createElement('div');
-    gameElement.classList.add('game'); 
-    gameElement.dataset.tags = game.genre;
-          const paddedNumber = String(game.number).padStart(2, '0');
-
-    gameElement.innerHTML = `
-    <div class="image-container">
-      <img src="./entries/assets/${game.source}" class="original-img" style="width: 19.375rem;height: 10.886rem; object-fit: cover; object-position: center center;">
-      <img src="./assets/${game.source.replace(/\.\w+$/, 'G.jpg')}" class="filtered-img" style="width: 19.375rem;height: 10.886rem; object-fit: cover; object-position: center center;">
-    </div>
-      <div class="text-block">
-        <h2>${paddedNumber} » ${game.name}</h2>
-        <p>Platform: <i>${game.platform ? game.platform : ''}</i></p>
-        <p>Playtime: <i>${game.hrsPlayed ? game.hrsPlayed : ''} </i>Hours</p>
-        <p>Comment: <i>${game.note ? game.note : ''}</i></p>
-      </div>
-    `;
-    gameContainerMetro.appendChild(gameElement);
-
-    
-  });
-
-
-
-function showGame(gameId) {
-
-  console.log('show game');
-
-
-
-
-  var games = document.querySelectorAll('.game')
-  games.forEach((game) => {
-    var gameTags = game.dataset.tags.split(',')
-
-    Array.isArray(game.genre)
-   
-    if(gameTags.includes(gameId)){
-      game.style.display = 'flex';
-    } else{
-      game.style.display = 'none';
+const keyframes = document.createElement('style');
+keyframes.textContent = `
+    @keyframes fontChange {
+        ${fonts.map((font, index) => `
+            ${index * (100 / fonts.length)}% {
+                font-family: ${font};
+            }
+        `).join('')}
     }
-  });
+`;
+document.head.appendChild(keyframes);
 
 
- }
- 
+const textElement = document.querySelector('.text-animation');
+textElement.classList.add('font-change-animation');
 
- const btns = document.querySelectorAll('.tag');
+textElement.addEventListener('mouseover', function() {
+  textElement.style.animationPlayState = 'paused';
+});
 
- btns.forEach(btn => {
-   btn.addEventListener('click', (e) => {
-    let currentTag = e.target.dataset.tag;
-    showGame(currentTag);
+// 添加鼠标移开事件监听器
+textElement.addEventListener('mouseout', function() {
+  textElement.style.animationPlayState = 'running';
+});
 
-     btns.forEach(otherBtn => {
-       otherBtn.style.backgroundColor = '' ;
-     });
- 
-    //  btn.style.backgroundColor = '#7530D9';
-   });
- });
 
- 
- 
-  })})
-
-  const screenWidth = window.innerWidth;
-
-  function openNav() {
-    if (screenWidth <= 768) {
-    document.getElementById("mySidenav").style.right = "-12rem";
-    }
-    else{
-      document.getElementById("mySidenav").style.right = "-37.5rem";
-    }
-  }
-  
-  function closeNav() {
-    if (screenWidth <= 768) {
-    document.getElementById("mySidenav").style.right = "-21.5rem";
-  }
-  else{
-    document.getElementById("mySidenav").style.right = "-40.5rem";
-  }
+document.addEventListener('click', function(event) {
+  // 检查点击的目标是否为文本输入框，如果是则不执行跳转操作
+  if (event.target.tagName.toLowerCase() === 'input' || event.target.tagName.toLowerCase() === 'textarea') {
+      return; // 如果点击的是文本输入框，则不执行跳转操作
   }
 
-  function adjustSidenavPosition() {
-    const screenWidth = window.innerWidth;
-    const sidenav = document.getElementById("mySidenav");
-
-    if (screenWidth <= 768) {
-      sidenav.style.right = "-12rem";
-    } else {
-      sidenav.style.right = "-37.5rem";
-    }
-  }
-
-  window.addEventListener("resize", adjustSidenavPosition);
-  adjustSidenavPosition();
-  
+  // 跳转到指定页面
+  window.location.href = 'https://ni0j.github.io/game-logs/entries/entry1/';
+});
