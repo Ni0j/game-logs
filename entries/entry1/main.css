@@ -653,16 +653,7 @@ margin: 0;
 z-index: 999;
 }
 
-.side-bar p{
-  color: #0CBF07;
-  font-family: "t26-carbon", monospace;
-  font-weight: 100;
-  font-style: normal;
-font-size: 0.75rem;
-font-style: italic;
-font-weight: 425;
-line-height: normal;
-}
+
 
 .side-bar a{
   color: #0CBF07;
