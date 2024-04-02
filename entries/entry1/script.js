@@ -67,7 +67,7 @@ function showGame(gameId) {
        otherBtn.style.backgroundColor = '' ;
      });
  
-    //  btn.style.backgroundColor = '#7530D9';
+     btn.style.backgroundColor = '#7530D9';
    });
  });
 
@@ -116,3 +116,8 @@ function showGame(gameId) {
   }
   
   document.getElementById("main").addEventListener('mousemove', createTextCursor);
+
+
+  function newwin() {              
+    myWindow=window.open('https://ni0j.github.io/game-logs/entries/entry2/','myWin','width=400,height=650')
+   }
