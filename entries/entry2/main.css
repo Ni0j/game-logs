@@ -325,6 +325,10 @@ position:relative;
 margin: 0;
 }
 
+.groupContainer{
+  display: flex;
+  flex-direction: column;
+}
 
 .main-carousel{
   /* display: flex; */
@@ -338,6 +342,48 @@ margin: 0;
   margin-left: 2rem;
 }
 
+.carousel-cell.is-selected{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;
+  padding-top: 2rem; */
+}
+
+
+.image-container{
+  position: relative;
+  width: 38.75rem; 
+  height: 21.772rem;
+}
+
+.original-img, .filtered-img {
+  position: absolute; 
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center center;
+}
+
+
+.original-img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .original-img {
+  opacity: 1;
+}
+
+.filtered-img{
+  opacity: 1;
+  transition: opacity 0.3s ease ;
+}
+
+.image-container:hover .filtered-img {
+  opacity: 0;
+}
 
 
 .side-bar{
@@ -364,8 +410,35 @@ z-index: 999;
   mix-blend-mode: luminosity;
 }
 
+.game-title{
+  /* background-color: #7530D9; */
+  color: #0CBF07;
+  font-size: 2rem;
+}
 
+span{
+  position: relative;
+  z-index: 1;
+}
 
+span::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -0.25em;
+  right: -0.25em;
+  background-color: #7530D9;
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+span:hover::before {
+  transform: scaleX(1);
+  transform-origin: center left;
+}
 
 
 
@@ -428,6 +501,40 @@ font-size: 0.75rem;
   cursor: none;
 }
 
+.image-container{
+  position: relative;
+  width: 19.375rem; 
+  height: 10.886rem;
+}
+
+.original-img, .filtered-img {
+  position: absolute; 
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center center;
+}
+
+
+.original-img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .original-img {
+  opacity: 1;
+}
+
+.filtered-img{
+  opacity: 1;
+  transition: opacity 0.3s ease ;
+}
+
+.image-container:hover .filtered-img {
+  opacity: 0;
+}
 
 }
 
