@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function (){
     const gameElement = document.createElement('div');
     gameElement.classList.add('game'); 
     gameElement.dataset.tags = game.genre;
+    // const genreWithHash = game.genre.map(type => `#${type}`);
           const paddedNumber = String(game.number).padStart(2, '0');
+          
 
     gameElement.innerHTML = `
     <div class="image-container">
@@ -21,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function (){
       <div class="text-block">
         <h2>${paddedNumber} » ${game.name}</h2>
         <p>Platform: <i>${game.platform ? game.platform : ''}</i></p>
+        <p>Genre: <i>${game.genre ? game.genre : ''}</i></p>
         <p>Playtime: <i>${game.hrsPlayed ? game.hrsPlayed : ''} </i>Hours</p>
         <p>Comment: <i>${game.note ? game.note : ''}</i></p>
       </div>
