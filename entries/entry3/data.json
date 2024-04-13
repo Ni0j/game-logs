@@ -1,0 +1,415 @@
+[
+  {
+  
+    "name": "A Way Out",
+
+    "price": 158,
+  
+    "addedOnDate": "7/14/2023",
+  
+    "genre": ["Co-op", "Story Rich"],
+
+    "note": "MY LIFE SAVER during COVID-19 LOCKDOWN",
+  
+    "source": "aWayOutHeader.jpeg",
+
+    "number": 1
+    
+    },
+    
+  {
+  
+      "name": "Blasphemous",
+    
+      "price": 98,
+    
+      "addedOnDate": "7/30/2021",
+      
+      "genre": ["Metroidvania", "Pixel", "Soulslike", "Gore"],
+    
+      "note": "who doesn't like to explore the universe?",
+    
+      "source": "blasphemousHeader.jpeg",
+
+      "number": 2
+      
+  },
+
+  {
+  
+    "name": "Cities: Skylines",
+  
+    "price": 138,
+    
+    "addedOnDate": "2/12/2021",
+  
+    "genre": ["Simulation","Building","Management"],
+  
+    "note": "bought this game because I was drawn to its visual design.",
+  
+    "source": "citiesSkylinesHeader.jpeg",
+
+    "number": 3
+    
+    },
+
+    {
+  
+      "name": "CRISIS CORE –FINAL FANTASY VII– REUNION",
+      
+      "price": 298,
+      
+      "addedOnDate": "12/25/2022",
+      
+      "genre": ["Action", "RPG", "AVG", "JRPG", "ARPG"],
+      
+      "note": "maybe, perhaps, oneday, someday in the future I will try to complete it...",
+    
+      "source": "ffviHeader.jpeg",
+      
+      "number": 4
+      
+      },
+
+  {
+  
+   "name": "Cyberpunk 2077",
+      
+  "price": 298,
+        
+   "addedOnDate": "1/16/2021",
+        
+   "genre": ["Cyberpunk", "Open World", "RPG"],
+        
+   "note": "guess why 32.8 hrs, this games cant saved your progress",
+      
+   "source": "cyberpunk2077Header.jpeg",
+
+   "number": 5
+        
+  },
+
+  {
+  
+    "name": "Devil May Cry 5",
+    
+    "price": 148,
+    
+    "addedOnDate": "12/19/2020",
+    
+    "genre": ["Action", "Hack and Slash", "AAVG"],
+    
+    "note": "a good game to relieve stress and let off steam when you're angry",
+  
+    "source": "dmc5Header.jpeg",
+
+    "number": 6
+    
+    },
+
+    {
+  
+      "name": "Ghostrunner",
+    
+      "price": 148,
+    
+      "addedOnDate": "11/21/2023",
+    
+      "genre": ["Action", "Cyberpunk", "First-Person"],
+    
+      "note": "I really like the design of the masks in it and the clothes...",
+    
+      "source": "ghostrunnerHeader.jpeg",
+
+      "number": 7
+    
+      },
+
+      {
+  
+        "name": "House Flipper 2",
+        
+        "price": 135.99,
+        
+        "addedOnDate": "3/10/2024",
+        
+        "genre": ["Simulation", "Building", "Design", "Casual"],
+        
+        "note": "very small game but gradually reveals a huge worldview, and I like the art style as well",
+      
+        "source": "houseFlipperHeader.jpeg",
+
+        "number": 8
+        
+        },
+
+        {
+  
+          "name": "Inscryption",
+          
+          "price": 88,
+          
+          "addedOnDate": "10/30/2021",
+          
+          "genre": ["Card", "Story Rich","Horror"],
+        
+          "note": "ngl too much to study, so im just having occasional fun",
+        
+          "source": "inscryptionHeader.jpeg",
+
+          "number": 9
+          
+          },
+
+          {
+  
+            "name": "Lethal Company",
+            
+            "price": 42,
+            
+            "addedOnDate": "4/5/2024",
+            
+            "genre": ["Horror", "First-Person", "Co-op", "Survival Horror"],
+            
+            "note": "still love these types of detective games, and I'm enjoying the twists and turns in the cases much more this version as well",
+          
+            "source": "lethalCompanyHeader.jpeg",
+
+            "number": 10
+            
+            },
+
+            {
+
+              "name": "Lobotomy Corporation",
+              
+              "price": 80,
+              
+              "addedOnDate": "1/5/2021",
+              
+              "genre": ["Horror", "Management", "Simulation", "Story Rich", "Psychological Horror"],
+              
+              "note": "classic",
+            
+              "source": "lobotomyCorporationHeader.jpeg",
+
+              "number": 11
+              
+              },
+
+              {
+  
+                "name": "Mundaun",
+              
+                "price": 78,
+              
+                "addedOnDate": "1/11/2024",
+              
+                "genre": ["Walking Simulator", "Psychological Horror", "Horror"],
+              
+                "note": "i smelled money burning...so me and my friend are just casual players",
+              
+                "source": "mundaunHeader.jpeg",
+
+                "number": 12
+              
+                },
+
+                {
+  
+                  "name": "OCTOPATH TRAVELER",
+                  
+                  "price": 402,
+                  
+                  "addedOnDate": "12/25/2022",
+                  
+                  "genre": ["RPG","JRPG", "Pixel", "Story Rich"],
+                  
+                  "note": "everybody loves Cloud Strife.",
+                  
+                  "source": "OCTOPATHTRAVELERHeader.jpeg",
+
+                  "number": 13
+                  
+                  },
+
+  {
+  
+  "name": "Palworld",
+
+  "price": 108,
+
+  "addedOnDate": "1/21/2024",
+
+  "genre": ["Open World"],
+
+  "note": "i want to play 7.0 now",
+
+  "source": "palworldHeader.jpeg",
+
+  "number": 14
+  
+  },
+  
+  {
+  
+  "name": "Persona 3 Reload",
+  
+  "price": 349,
+  
+  "addedOnDate": "2/7/2024",
+  
+  "genre": ["JRPG","RPG","AVG"],
+
+  "note": "coooool car",
+  
+  "source": "p3rHeader.jpeg",
+
+  "number": 15
+  
+  },
+
+  {
+  
+  "name": "Persona 5 Royal",
+  
+  "price": 329,
+  
+  "addedOnDate": "11/21/2023",
+  
+  "genre": ["JRPG","Story Rich"],
+  
+  "note": "art piece",
+
+  "source": "p5rHeader.jpeg",
+
+  "number": 16
+  
+  },
+
+  {
+  
+  "name": "Please, Touch The Artwork 2",
+  
+  "price": 0,
+  
+  "addedOnDate": "3/8/2024",
+  
+  "genre": ["AVG","Casual","Puzzle"],
+  
+  "note": "top 1 FTG",
+
+  "source": "plsTouchTheArtWorkHeader.jpeg",
+
+  "number": 17
+  
+  },
+
+  {
+  
+  "name": "Rental",
+
+  "price": 0,
+  
+  "addedOnDate": "3/24/2024",
+  
+  "genre": ["Horror","AVG"],
+
+  "note": "lawn mowing game",
+
+  "source": "rentalHeader.jpeg",
+
+  "number": 18
+  
+  },
+
+  {
+  
+    "name": "SPACE ENGINE PRO",
+    
+    "price": 500,
+    
+    "addedOnDate": "10/31/2021",
+    
+    "genre": ["Simulation","Indie","Casual"],
+    
+    "note": "short but delicate",
+  
+    "source": "spaceEngineProHeader.jpeg",
+
+    "number": 19
+    
+    },
+
+  {
+  
+  "name": "Stardew Valley",
+  
+  "price": 48,
+  
+  "addedOnDate": "4/16/2023",
+  
+  "genre": ["Simulation", "Pixel", "RPG"],
+  
+  "note": "played with my bf and really enjoy everything in it",
+
+  "source": "stardewValleyHeader.jpeg",
+
+  "number": 20
+  
+  },
+  
+  {
+  
+  "name": "SUMMERHOUSE",
+
+  "price": 22,
+
+  "addedOnDate": "3/24/2024 ",
+
+  "genre": ["Casual","Building"],
+
+  "note": "chief feature: mid; safe bet: bot; seasonal limited: jungle",
+
+  "source": "SUMMERHOUSEHeader.jpeg",
+
+  "number": 21
+  
+  },
+  
+  {
+  
+  "name": "Viewfinder",
+
+  "price": 92,
+
+  "addedOnDate": "12/24/2023",
+
+  "genre": ["First-Person","Puzzle"],
+
+  "note": "played for a month last summer. imo better battle experience and classes than FFXIV, and that all the pros",
+
+  "source": "viewfinderHeader.jpeg",
+
+  "number": 22
+  
+  },
+
+  {
+  
+  "name": "WORLD OF HORROR",
+
+  "price": 76,
+
+  "addedOnDate": "7/6/2022",
+
+  "genre": ["Horror","Survival Horror","Pixel"],
+
+  "note": "still one of the best game in my mind in every perspective",
+
+  "source": "worldOfHorrorHeader.jpeg",
+
+  "number": 23
+  
+  }
+]
