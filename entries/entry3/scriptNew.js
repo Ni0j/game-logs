@@ -50,8 +50,7 @@ document.addEventListener("DOMContentLoaded", function (){
       uniquePrices.forEach(uniquePrice => {
  
          let price = document.querySelectorAll('.tag-block1 .tag');
-         price.innerHTML = uniquePrice
-         price.classList.add('button-price')
+  
 
          let priceContainer = document.querySelector('.price-container')
          priceContainer.append(price)
