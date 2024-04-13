@@ -126,10 +126,10 @@ margin: 0;
 }
 @keyframes shadowBlink {
   from {
-      filter: drop-shadow(0px 0px 1px rgb(179, 191, 7));
+      filter: drop-shadow(0px 0px 1px rgb(238, 255, 0));
   }
   to {
-      filter: drop-shadow(0px 0px 20px rgba(179, 191, 7));
+      filter: drop-shadow(0px 0px 20px rgb(238, 255, 0));
   }
 }
 
