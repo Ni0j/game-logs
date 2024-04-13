@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'unknown'; /* 定义字体名称 */
-  src: url('./Unknown-MX.ttf') format('truetype'); /* 引用本地字体文件路径 */
+  font-family: 'unknown'; 
+  src: url('./Unknown-MX.ttf') format('truetype'); 
 }
 
 html{
@@ -611,12 +611,13 @@ width: 80vw;
 padding: 0rem;
 flex-direction: row;
 flex-wrap: wrap;
-align-items: flex-start;
+align-items: center;
 justify-content: flex-start;
 gap: 1.5rem;
 /* border-top: 1px solid #BCE743; */
 position: relative;
 margin-top: 4rem;
+
 }
 
 .game{
@@ -625,7 +626,7 @@ margin-top: 4rem;
   justify-content: center;
   align-items: center;
   margin-top: 0.25rem;
-  padding:1rem;
+  padding:1rem 1rem 1rem 0rem;
   border-bottom: 1px dashed #BCE743;
   border-top: 1px solid #BCE743;
 }
@@ -648,15 +649,15 @@ font-size: 0.75rem;
 font-style: normal;
 font-weight: 425;
 line-height: -0.5px;
-width: 19.375rem;
+width: 16rem;
 margin: 0;
-margin-left: 0rem;
+margin-left: 1rem;
 }
 
 .text-block h2{
   color: #BCE743;
   font-family: "unknown";
-  font-size: 1rem;
+  font-size: 0.75rem;
   margin-bottom:0rem;
 }
 
@@ -675,8 +676,8 @@ padding-left: 1.75rem;
 
 .image-container{
   position: relative;
-  width: 21.4rem; 
-  height: 10rem;
+  width: 12.84rem; 
+  height: 6rem;
 }
 
 .original-img, .filtered-img {
@@ -867,7 +868,7 @@ position: fixed;
 z-index: 999;
 background-color: #0D0D0D;
 right: 0%;
-width: 20vw;
+width: 18vw;
 height: 70vh;
 padding: 2rem 2rem 0.25rem 2rem;
 align-items: center;
@@ -885,7 +886,7 @@ margin: 0;
 .tag-block2{
   position: fixed;
   display: flex;
-  width: 20vw;
+  width: 18vw;
   bottom: 0%;
   height:30vh;
   right: 0%;

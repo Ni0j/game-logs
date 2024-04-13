@@ -77,15 +77,14 @@ document.addEventListener("DOMContentLoaded", function (){
   
       gameElement.innerHTML = `
       <div class="image-container">
-        <img src="./assets/${game.source}" class="original-img" style="width: 21.4rem;height: 10rem; object-fit: cover; object-position: center center;">
-        <img src="./assets/${game.source.replace(/\.\w+$/, 'Y.jpg')}" class="filtered-img" style="width: 21.4rem;height: 10rem; object-fit: cover; object-position: center center;">
+        <img src="./assets/${game.source}" class="original-img" style="object-fit: cover; object-position: center center;">
+        <img src="./assets/${game.source.replace(/\.\w+$/, 'Y.jpg')}" class="filtered-img" style="object-fit: cover; object-position: center center;">
     </div>
         <div class="text-block">
           <h2>${paddedNumber} » ${game.name}</h2>
           <p>Genre: <i>${game.genre ? game.genre : ''}</i></p>
           <p>Price: <i>${game.price ? game.price : ''} RMB</i></p>
           <p>Added On Date: <i>${game.addedOnDate ? game.addedOnDate : ''}</i></p>
-          <p>Comment: <i>${game.note ? game.note : ''}</i></p>
         </div>
       `;
       gameContainerMetro.appendChild(gameElement);
