@@ -3,6 +3,14 @@ let selectedPriceNow = ""
 let selectedGenreNow = ""
 let gameContainerMetro = null
 let filteredGames = [];
+let showItemForm = {
+    source: "",
+    name: "",
+    genre: "",
+    price: "",
+    addedOnDate: "",
+    sourceHighlight: ""
+}
 document.addEventListener("DOMContentLoaded", function (){
   fetch('data.json')
   .then(response => response.json())
@@ -10,6 +18,19 @@ document.addEventListener("DOMContentLoaded", function (){
 
     gameData = data;
     gameContainerMetro = document.getElementById('game-container-metro');
+
+    //tanchuang
+    let modal = document.getElementById("modal")
+    
+    document.getElementById("close").onclick = function () {
+        modal.style.display = "none";
+    };
+    // 点击其他领域(即弹窗背景)
+    window.onclick = function(event){
+        if(event.target ==modal){
+            modal.style.display = "none"
+        }
+    }
 
 
     // const priceButtons = document.querySelectorAll('.tag-block2 .tag');
@@ -151,6 +172,50 @@ function handlePriceChange(event) {
     }
 }
 
+// tanchuang:
+function showDialog(gameNumber) {
+    let dialogDiv =  document.getElementById('dialog-content');
+    dialogDiv.innerHTML = ''
+    showItemForm = {
+        source: "",
+        name: "",
+        genre: "",
+        price: "",
+        addedOnDate: "",
+        sourceHighlight: ""
+    }
+    gameData.forEach(item => {
+        if (item.number === gameNumber) {
+            let imgData = JSON.stringify(item)
+            showItemForm = JSON.parse(imgData)
+        }
+    })
+    if (showItemForm.name) {
+        let modal = document.getElementById("modal")
+        modal.style.display = "block";
+        document.getElementById("dialog-title-text").innerHTML = showItemForm.name
+
+        // tanchaung style
+        const paddedNumber = String(showItemForm.number).padStart(2, '0');
+        // const gameElement = document.createElement('div');
+        dialogDiv.innerHTML = `
+        <div class="image-container-new">
+          <img src="./assets/${showItemForm.source}" class="original-img" style="object-fit: cover; object-position: center center;">
+          <img src="./assets/${showItemForm.source.replace(/\.\w+$/, 'Y.jpg')}" class="filtered-img" style="object-fit: cover; object-position: center center;">
+        </div>
+        <div class="text-block-new">
+          <h2>${paddedNumber} » ${showItemForm.name}</h2>
+          <p>Genre: <i>${showItemForm.genre ? showItemForm.genre : ''}</i></p>
+          <p>Price: <i>${showItemForm.price || showItemForm.price == 0 ? showItemForm.price : ''} RMB</i></p>
+          <p>Added On Date: <i>${showItemForm.addedOnDate ? showItemForm.addedOnDate : ''}</i></p>
+        </div>
+      `;
+        // dialogDiv.appendChild(gameElement);
+    } else {
+        alert("error")
+    }
+}
+
 // 根据金额、类型筛选
 function filterGames(selectedPrice, selectedGenre) {
   gameContainerMetro.innerHTML = ''
@@ -186,13 +251,17 @@ function filterGames(selectedPrice, selectedGenre) {
         } else {
             gameElement.style.display = 'none';
         }
+        // console.log(JSON.stringify(game), "-=-=JSON.stringify(game)")
+        // let itemData = {
+        //     number: game.number
+        // }
 
 
         gameElement.innerHTML = `
-      <div class="image-container">
-        <img src="./assets/${game.source}" class="original-img" style="object-fit: cover; object-position: center center;">
-        <img src="./assets/${game.source.replace(/\.\w+$/, 'Y.jpg')}" class="filtered-img" style="object-fit: cover; object-position: center center;">
-    </div>
+        <div class="image-container" onclick="showDialog(${game.number})">
+          <img src="./assets/${game.source}" class="original-img" style="object-fit: cover; object-position: center center;">
+          <img src="./assets/${game.source.replace(/\.\w+$/, 'Y.jpg')}" class="filtered-img" style="object-fit: cover; object-position: center center;">
+        </div>
         <div class="text-block">
           <h2>${paddedNumber} » ${game.name}</h2>
           <p>Genre: <i>${game.genre ? game.genre : ''}</i></p>
@@ -309,11 +378,3 @@ tagGenre.forEach(btn => {
   function newwin() {
     myWindow=window.open('https://ni0j.github.io/game-logs/entries/entry2/','myWin','width=400,height=650')
    }
-
-
-   document.querySelectorAll('.game').forEach(function(gameElement) {
-    gameElement.addEventListener('click', function() {
-        this.style.transform = 'scale(1.5)';
-        console.log('clicked');
-    });
-});
