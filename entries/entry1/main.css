@@ -571,67 +571,6 @@ animation-timing-function: ease;
   50%  { transform: scale(1,1)    translateY(0); }
   100% { transform: scale(1,1)    translateY(0); }
 }
-/* 
-.menu{
-position: fixed;
-  top:16%;
-  right:0rem;
-  justify-content: flex-end;
-  border-radius: 0.125rem;
-  background-color: #7530D9;
-  
-}
-span{
-  display: flex;
-  color: #0CBF07;
-  font-family: "t26-carbon", monospace;
-  font-size: 3rem;
-  color:#0CBF07 ;
-  height: 30px;
-  width: 30px;
-  align-items: center;
-  justify-content: center;
-}
-.sidenav {
-  position: fixed;
-  top:14.25rem;
-  right: -21.5rem;
-  display: flex;
-width: 100%;
-height: 1.6875rem;
-padding: 0.625rem 1.25rem;
-justify-content: center;
-align-items: center;
-gap: 1.75rem;
-flex-shrink: 0;
-border-radius: 0rem 0rem 999.3125rem 999.3125rem;
-background: #7530D9;
-margin: 0;
-transition: 0.5s;
-z-index: 888;
-}
-
-.sidenav a {
-  color: #0CBF07;
-  font-family: "t26-carbon", monospace;
-  font-weight: 100;
-  font-style: normal;
-font-size: 0.75rem;
-font-weight: 425;
-line-height: normal;
-text-transform: uppercase;
-text-decoration: none;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  text-decoration:  1px dashed underline;
-}
-
-.sidenav .closebtn {
-  left: 0;
-  font-size: 3rem;
-} */
 
 
 .side-bar{

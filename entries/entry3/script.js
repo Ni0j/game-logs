@@ -1,81 +1,194 @@
+let gameData = []
+let selectedPriceNow = ""
+let selectedGenreNow = ""
+let gameContainerMetro = null
+let filteredGames = [];
 document.addEventListener("DOMContentLoaded", function (){
   fetch('data.json')
   .then(response => response.json())
   .then(data => {
 
-  const gameData = data;
-  const gameContainerMetro = document.getElementById('game-container-metro');
-  let filteredGames = []; 
+    gameData = data;
+    gameContainerMetro = document.getElementById('game-container-metro');
 
-  
-  const priceButtons = document.querySelectorAll('.tag-block2 .tag');
-  const genreButtons = document.querySelectorAll('.tag-block1 .tag');
 
-  priceButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const selectedPrice = button.dataset.tag;
-        const selectedGenre = getSelectedGenre();
-        filterGames(selectedPrice, selectedGenre); // Call the filter function
-        console.log("button clicked")
+    // const priceButtons = document.querySelectorAll('.tag-block2 .tag');
+    // const genreButtons = document.querySelectorAll('.tag-block1 .tag');
+
+    //   priceButtons.forEach(button => {
+    //     button.addEventListener('click', () => {
+    //         const selectedPrice = button.dataset.tag;
+    //         const selectedGenre = getSelectedGenre();
+    //         filterGames(selectedPrice, selectedGenre); // Call the filter function
+    //         console.log("button clicked")
+    //     });
+    // });
+    //         genreButtons.forEach(button => {
+    //             button.addEventListener('click', () => {
+    //               const selectedPrice = getSelectedPrice();
+    //               const selectedGenre = button.dataset.tag;
+    //                 filterGames(selectedPrice, selectedGenre); // Call the filter function
+    //             });
+    //         });
+
+    // function getSelectedPrice() {
+    //   const selectedPriceButton = document.querySelector('.tag-block2 .tag.active');
+    //   return selectedPriceButton ? selectedPriceButton.dataset.tag : ''; // Return selected price tag
+    // }
+    // function getSelectedGenre() {
+    //   const selectedGenreButton = document.querySelector('.tag-block1 .tag.active');
+    //   return selectedGenreButton ? selectedGenreButton.dataset.tag : ''; // Return selected genre tag
+    // }
+    // filterGames(getSelectedPrice(), getSelectedGenre());
+    filterGames(selectedPriceNow, selectedGenreNow)
+
+    price.addEventListener('click', (e) => {
+        let currentPrice = e.target.dataset.price
+        let allgames = document.querySelectorAll('.game');
+        let allPriceButtons = document.querySelectorAll('.button-price');
+
+        allPriceButtons.forEach(btn => btn.classList.remove('active'));
+        e.target.classList.add('active');
+        //url
+        let activeGenreButton = document.querySelector('.button-genre.active')?.dataset?.genre
+
+        allgames.forEach((game) => {
+           if(activeGenreButton) {
+                console.log('currentPrice', currentPrice)
+               if(
+                  currentPrice == game.dataset.price &&
+                  activeGenreButton.dataset.genre == game.dataset.genre
+                  ){
+                  game.classList.remove("hidden");
+               }
+               else{
+                  game.classList.add('hidden');
+               }
+           }else{
+               if (currentPrice == game.dataset.price){
+                  game.classList.remove("hidden");
+               }else{
+                  game.classList.add("hidden");
+               }
+           }
+        });
     });
-});
-        genreButtons.forEach(button => {
-            button.addEventListener('click', () => {
-              const selectedPrice = getSelectedPrice();
-              const selectedGenre = button.dataset.tag;
-                filterGames(selectedPrice, selectedGenre); // Call the filter function
-            });
+
+    console.log('uniqueGenre', uniqueGenres);
+    console.log('uniquePrices',uniquePrices);
+
+
+    uniqueGenres.forEach(uniqueGenre => {
+
+        let genre = document.createElement('button');
+        genre.innerHTML = uniqueGenre
+
+        let genreContainer = document.querySelector('.genre-container')
+        genreContainer.append(genre)
+    })
+    price.addEventListener('click', (e) => {
+        let currentPrice = e.target.dataset.price
+        let allgames = document.querySelectorAll('.game');
+        let allGenreButtons = document.querySelectorAll('.button-genre');
+
+        allGenreButtons.forEach(btn => btn.classList.remove('active'));
+        e.target.classList.add('active');
+        //url
+        let activePriceButton = document.querySelector('.button-price.active')?.dataset?.price
+
+        allgames.forEach((game) => {
+          if(activePriceButton) {
+              console.log('currentPrice', currentPrice)
+            if(
+              currentPrice == game.dataset.price &&
+              activePriceButton.dataset.genre == game.dataset.genre
+              ){
+              game.classList.remove("hidden");
+            }
+            else{
+              game.classList.add('hidden');
+            }
+          }else{
+              if (currentPrice == game.dataset.price){
+                game.classList.remove("hidden");
+              }else{
+                game.classList.add("hidden");
+              }
+          }
         });
 
-        function getSelectedPrice() {
-          const selectedPriceButton = document.querySelector('.tag-block2 .tag.active');
-          return selectedPriceButton ? selectedPriceButton.dataset.tag : ''; // Return selected price tag
+    });
+  })
+});
+// 选中类型
+function handleGenreChange(event) {
+    if (event.target.value || event.target.value === 0) {
+        let count = 0
+        let radios = document.getElementsByName('genre-checkbox');
+        for(let i = 0, length = radios.length; i < length; i++) {
+            if(radios[i].checked && radios[i].value === selectedGenreNow) {
+                radios[i].checked = false
+                count ++
+            }
         }
-    
-        function getSelectedGenre() {
-          const selectedGenreButton = document.querySelector('.tag-block1 .tag.active');
-          return selectedGenreButton ? selectedGenreButton.dataset.tag : ''; // Return selected genre tag
+        selectedGenreNow = count > 0 ? "" : event.target.value;
+        filterGames(selectedPriceNow, selectedGenreNow); // Call the filter function
+    }
+}
+// 选中金额
+function handlePriceChange(event) {
+    if (event.target.value || event.target.value === 0) {
+        let count = 0
+        let radios = document.getElementsByName('price-checkbox');
+        for(let i = 0, length = radios.length; i < length; i++) {
+            if(radios[i].checked && radios[i].value === selectedPriceNow) {
+                radios[i].checked = false
+                count ++
+            }
         }
+        selectedPriceNow = count > 0 ? "" : event.target.value;
+        filterGames(selectedPriceNow, selectedGenreNow); // Call the filter function
+    }
+}
 
-        
-      function filterGames(selectedPrice, selectedGenre) {
-  
+// 根据金额、类型筛选
+function filterGames(selectedPrice, selectedGenre) {
+  gameContainerMetro.innerHTML = ''
+  let resultCount = 0
+    filteredGames = gameData.forEach(game => {
+        const gameElement = document.createElement('div');
+        gameElement.classList.add('game');
+        gameElement.dataset.tags = game.genre;
+        gameElement.dataset.price = game.price;
 
-        filteredGames = gameData.forEach(game => {
-      const gameElement = document.createElement('div');
-      gameElement.classList.add('game'); 
-      gameElement.dataset.tags = game.genre;
-    
-            const paddedNumber = String(game.number).padStart(2, '0');
-            const gamePrice = game.price;
-    
-          
+        const paddedNumber = String(game.number).padStart(2, '0');
+        const gamePrice = game.price;
 
-            //根据clicked price对比json里的数据，判断是否显示price
-            const shouldShowPrice = (
-            !selectedPrice ||
+        const gameGenre = game.genre
+      
+        //根据clicked price对比json里的数据，判断是否显示price
+        const shouldShowPrice = (
+          !selectedPrice || selectedPrice === "" ||
             (selectedPrice === '0' && gamePrice === 0) ||
             (selectedPrice === '100' && gamePrice <= 100) ||
             (selectedPrice === '200' && gamePrice <= 200) ||
             (selectedPrice === '300' && gamePrice <= 300) ||
             (selectedPrice === '400' && gamePrice <= 400) ||
             (selectedPrice === '500' && gamePrice > 400)
-          );
-    
-          //这个是判断genre
-          const shouldShowGenre = (!selectedGenre || 
-            gameGenre.includes(selectedGenre));
-  
-        
+        );
 
-          if (shouldShowPrice && shouldShowGenre) {
+        //这个是判断genre
+      const shouldShowGenre = (!selectedGenre || selectedGenre === "" || gameGenre.includes(selectedGenre));
+
+
+        if (shouldShowPrice && shouldShowGenre) {
             gameElement.style.display = 'flex';
-          } else {
+        } else {
             gameElement.style.display = 'none';
-          }
-            
-  
-      gameElement.innerHTML = `
+        }
+
+
+        gameElement.innerHTML = `
       <div class="image-container">
         <img src="./assets/${game.source}" class="original-img" style="object-fit: cover; object-position: center center;">
         <img src="./assets/${game.source.replace(/\.\w+$/, 'Y.jpg')}" class="filtered-img" style="object-fit: cover; object-position: center center;">
@@ -83,127 +196,84 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="text-block">
           <h2>${paddedNumber} » ${game.name}</h2>
           <p>Genre: <i>${game.genre ? game.genre : ''}</i></p>
-          <p>Price: <i>${game.price ? game.price : ''} RMB</i></p>
+          <p>Price: <i>${game.price || game.price == 0 ? game.price : ''} RMB</i></p>
           <p>Added On Date: <i>${game.addedOnDate ? game.addedOnDate : ''}</i></p>
         </div>
       `;
-      gameContainerMetro.appendChild(gameElement);
-   
-     
+        gameContainerMetro.appendChild(gameElement);
     });
-  };
-  filterGames(getSelectedPrice(), getSelectedGenre());
-  price.addEventListener('click', (e) => {
-    let currentPrice = e.target.dataset.price      
-    let allgames = document.querySelectorAll('.game');
-    let allPriceButtons = document.querySelectorAll('.button-price');
-
-    allPriceButtons.forEach(btn => btn.classList.remove('active'));
-    e.target.classList.add('active');
-//url
-    let activeGenreButton = document.querySelector('.button-genre.active')?.dataset?.genre
-
-    allgames.forEach((game) => { 
-       if(activeGenreButton) {
-         console.log('currentPrice', currentPrice)
-       if(
-          currentPrice == game.dataset.price &&
-          activeGenreButton.dataset.genre == game.dataset.genre
-          ){
-          game.classList.remove("hidden");
-       }
-       else{
-          game.classList.add('hidden');
-       }
-    }else{
-       if (currentPrice == game.dataset.price){
-          game.classList.remove("hidden");
-       }else{
-          game.classList.add("hidden");
-       }
-    }
+    // 展示金额和类型
+    const gamesAll = document.querySelectorAll('.game');
+    gamesAll.forEach(game => {
+      const gameTagsNew = game.dataset.tags.split(',');
+      const gamePriceNew = game.dataset.price;
+      const shouldShowGenreNew = gameTagsNew.includes(selectedGenre) || !selectedGenre || selectedGenre === "";
+      const shouldShowPriceNew = (
+        !selectedPrice || selectedPrice === "" ||
+        (selectedPrice === '0' && gamePriceNew == 0) ||
+        (selectedPrice === '100' && gamePriceNew <= 100) ||
+        (selectedPrice === '200' && gamePriceNew <= 200) ||
+        (selectedPrice === '300' && gamePriceNew <= 300) ||
+        (selectedPrice === '400' && gamePriceNew <= 400) ||
+        (selectedPrice === '500' && gamePriceNew > 400)
+      );
+      if (shouldShowPriceNew && shouldShowGenreNew) {
+        game.style.display = 'flex';
+        resultCount++
+      } else {
+        game.style.display = 'none';
+      }
     });
-    
-   });
-})
-console.log('uniqueGenre', uniqueGenres);
-console.log('uniquePrices',uniquePrices);
+  document.getElementById("searchResult").textContent =resultCount;
+};
 
 
-uniqueGenres.forEach(uniqueGenre => {
 
- let genre = document.createElement('button');
- genre.innerHTML = uniqueGenre
 
- let genreContainer = document.querySelector('.genre-container')
- genreContainer.append(genre)
-})
-price.addEventListener('click', (e) => {
- let currentPrice = e.target.dataset.price      
- let allgames = document.querySelectorAll('.game');
- let allGenreButtons = document.querySelectorAll('.button-genre');
+const tagGenre = document.querySelectorAll('.tagGenre');
+const btnsPrice = document.querySelectorAll('.tagPrice');
 
- allGenreButtons.forEach(btn => btn.classList.remove('active'));
- e.target.classList.add('active');
-//url
- let activePriceButton = document.querySelector('.button-price.active')?.dataset?.price
+//  function showGame(gameId) {
+//     const games = document.querySelectorAll('.game');
+//     games.forEach(game => {
+//       const gameTags = game.dataset.tags.split(',');
+//       if (gameTags.includes(gameId) || !gameId || gameId === "") {
+//         game.style.display = 'flex';
+//       } else {
+//         game.style.display = 'none';
+//       }
+//     });
+// }
+btnsPrice.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        // let currentTag = e.target.dataset.tag;
+      // showGamePrice(selectedPriceNow);
 
- allgames.forEach((game) => { 
-    if(activePriceButton) {
-      console.log('currentPrice', currentPrice)
-    if(
-       currentPrice == game.dataset.price &&
-       activePriceButton.dataset.genre == game.dataset.genre
-       ){
-       game.classList.remove("hidden");
-    }
-    else{
-       game.classList.add('hidden');
-    }
- }else{
-    if (currentPrice == game.dataset.price){
-       game.classList.remove("hidden");
-    }else{
-       game.classList.add("hidden");
-    }
- }
- });
- 
-});
-  
+        btnsPrice.forEach(otherBtn => {
+            otherBtn.style.backgroundColor = '' ;
+        });
+        if (selectedPriceNow && selectedPriceNow !== "") {
+            btn.style.backgroundColor = '#7530D9';
+        }
+    });
 });
 
-
- const btns = document.querySelectorAll('.tag');
-
- function showGame(gameId) {
-  const games = document.querySelectorAll('.game');
-  games.forEach(game => {
-    const gameTags = game.dataset.tags.split(',');
-
-    if (gameTags.includes(gameId)) {
-      game.style.display = 'flex';
-    } else {
-      game.style.display = 'none';
-    }
-  });
-}
-
- btns.forEach(btn => {
+tagGenre.forEach(btn => {
    btn.addEventListener('click', (e) => {
-    let currentTag = e.target.dataset.tag;
-    showGame(currentTag);
+        // let currentTag = e.target.dataset.tag;
+        // showGame(selectedGenreNow);
 
-     btns.forEach(otherBtn => {
+       tagGenre.forEach(otherBtn => {
        otherBtn.style.backgroundColor = '' ;
-     });
- 
-     btn.style.backgroundColor = '#7530D9';
+       });
+       if (selectedGenreNow && selectedGenreNow !== "") {
+           btn.style.backgroundColor = '#7530D9';
+       }
    });
  });
 
- 
- 
+
+
 
 
 
@@ -226,16 +296,24 @@ price.addEventListener('click', (e) => {
 
   window.addEventListener("resize", adjustSidenavPosition);
   adjustSidenavPosition();
-  
+
   function createTextCursor(event){
     let el = document.getElementById("hoveringText");
       el.style.top = event.clientY + "px";
       el.style.left = event.clientX + "px";
   }
-  
+
   document.getElementById("main").addEventListener('mousemove', createTextCursor);
 
 
-  function newwin() {              
+  function newwin() {
     myWindow=window.open('https://ni0j.github.io/game-logs/entries/entry2/','myWin','width=400,height=650')
    }
+
+
+   document.querySelectorAll('.game').forEach(function(gameElement) {
+    gameElement.addEventListener('click', function() {
+        this.style.transform = 'scale(1.5)';
+        console.log('clicked');
+    });
+});

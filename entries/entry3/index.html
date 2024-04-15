@@ -19,55 +19,64 @@
      <img src="assets/titlever1.png" class="logo" style="width: 8.8125rem; height: 5.0625rem; filter: drop-shadow(0px 0px 10px rgb(170, 191, 7)); animation: shadowBlink 1s infinite alternate cubic-bezier(0.4, 0.1, 0.6, 0.9);">
      <div id="hoveringText">Game Data Updated: 04/11/2024</div>
     </div>
-    <div class="scroll-container">
-      <div id="scroll-text">A personal ever-growing archive for games.</div>
+    <div class="title-right">
+      <div class="scroll-container">
+        <div id="scroll-text">A personal ever-growing archive for games.</div>
       </div>
-      
-  </div> 
+      <div style="width: 100px; height: 20px; color: #bce743;">result: <span id="searchResult"></span></div>
+    </div>   
+  </div>
 
   <div style="width: 3000rem; height:6.0625rem; transform-origin: 0 0; background:linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #BCE743 100%)" class="gradientTop"></div>
 
 
-  
+
   <div class="tag-block1" id="genre-checkbox:checked">
-    <button class="tag AAVG" data-tag="AAVG">#A.AVG</button>
-    <button class="tag Action" data-tag="Action">#Action</button>
-    <button class="tag ADVAVG" data-tag="AVG">#ADV/AVG</button>
-    <button class="tag ARPG" data-tag="ARPG">#A.RPG</button>
-    <button class="tag Building" data-tag="Building">#Building</button>
-    <button class="tag Card" data-tag="Card">#Card</button>
-    <button class="tag Casual" data-tag="Casual">#Casual</button>
-    <button class="tag Co-op" data-tag="Co-op">#Co-op</button>
-    <button class="tag Cyberpunk" data-tag="Cyberpunk">#Cyberpunk</button>
-    <button class="tag Design" data-tag="Design">#Design</button>
-    <button class="tag Gore" data-tag="Gore">#Gore</button>
-    <button class="tag Horror" data-tag="Horror">#Horror</button>
-    <button class="tag JRPG" data-tag="JRPG">#JRPG</button>
-    <button class="tag Management" data-tag="Management">#Management</button>
-    <button class="tag Metroidvania" data-tag="Metroidvania">#Metroidvania</button>
-    <button class="tag OpenWorld" data-tag="Open World">#Open World</button>
-    <button class="tag Pixel" data-tag="Pixel">#Pixel</button>
-    <button class="tag Puzzle" data-tag="Puzzle">#Puzzle</button>
-    <button class="tag RPG" data-tag="RPG">#RPG</button>
-    <button class="tag Simulation" data-tag="Simulation">#Simulation</button>
-    <button class="tag Soulslike" data-tag="Soulslike">#Soulslike</button>
-    <button class="tag WalkingSimulator" data-tag="Walking Simulator">#Walking Simulator</button>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre AAVG" data-tag="AAVG"><input type="radio" id="AAVG" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="AAVG">#A.AVG</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Action" data-tag="Action"><input type="radio" id="Action" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Action">#Action</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre ADVAVG" data-tag="AVG"><input type="radio" id="AVG" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="AVG">#ADV/AVG</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre ARPG" data-tag="ARPG"><input type="radio" id="ARPG" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="ARPG">#A.RPG</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Building" data-tag="Building"><input type="radio" id="Building" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Building">#Building</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Card" data-tag="Card"><input type="radio" id="Card" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Card">#Card</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Casual" data-tag="Casual"><input type="radio" id="Casual" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Casual">#Casual</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Co-op" data-tag="Co-op"><input type="radio" id="Co-op" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Co-op">#Co-op</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Cyberpunk" data-tag="Cyberpunk"><input type="radio" id="Cyberpunk" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Cyberpunk">#Cyberpunk</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Design" data-tag="Design"><input type="radio" id="Design" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Design">#Design</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Gore" data-tag="Gore"><input type="radio" id="Gore" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Gore">#Gore</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Horror" data-tag="Horror"><input type="radio" id="Horror" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Horror">#Horror</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre JRPG" data-tag="JRPG"><input type="radio" id="JRPG" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="JRPG">#JRPG</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Management" data-tag="Management"><input type="radio" id="Management" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Management">#Management</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Metroidvania" data-tag="Metroidvania"><input type="radio" id="Metroidvania" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Metroidvania">#Metroidvania</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre OpenWorld" data-tag="Open World"><input type="radio" id="Open World" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Open World">#Open World</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Pixel" data-tag="Pixel"><input type="radio" id="Pixel" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Pixel">#Pixel</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Puzzle" data-tag="Puzzle"><input type="radio" id="Puzzle" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Puzzle">#Puzzle</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre RPG" data-tag="RPG"><input type="radio" id="RPG" name="genre-checkbox" style="margin-left: -1rem; width: 0;" value="RPG">#RPG</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Simulation" data-tag="Simulation"><input type="radio" id="Simulation" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Simulation">#Simulation</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre Soulslike" data-tag="Soulslike"><input type="radio" id="Soulslike" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Soulslike">#Soulslike</label>
+    <label onclick="handleGenreChange(event)" class="tag tagGenre WalkingSimulator" data-tag="Walking Simulator"><input type="radio" id="Walking Simulator" style="margin-left: -1rem; width: 0;" name="genre-checkbox" value="Walking Simulator">#Walking Simulator</label>
   </div>
 
 <div class="tag-block2">
   <!-- <input class="min-css" type="number" id="min-price-input" placeholder="min">
   <p>-</p>
   <input class="max-css" type="number" id="max-price-input" placeholder="max"> -->
-  <button class="tag" data-tag="0">Free</button>
-  <button class="tag" data-tag="100"> ≤ 100 </button>
-  <button class="tag" data-tag="200"> ≤ 200 </button>
-  <button class="tag" data-tag="300"> ≤ 300 </button>
-  <button class="tag" data-tag="400"> ≤ 400 </button>
-  <button class="tag" data-tag="500"> 400+ </button>
-</div>
+  <label onclick="handlePriceChange(event)" class="tag tagPrice" data-tag="0"><input type="radio" id="0" style="margin-left: -1rem; width: 0;" name="price-checkbox" value="0">Free</label>
+  <label onclick="handlePriceChange(event)" class="tag tagPrice" data-tag="100"><input type="radio" id="100" style="margin-left: -1rem; width: 0;" name="price-checkbox" value="100"> ≤ 100 G </label>
+  <label onclick="handlePriceChange(event)" class="tag tagPrice" data-tag="200"><input type="radio" id="200" style="margin-left: -1rem; width: 0;" name="price-checkbox" value="200"> ≤ 200 G </label>
+  <label onclick="handlePriceChange(event)" class="tag tagPrice" data-tag="300"><input type="radio" id="300" style="margin-left: -1rem; width: 0;" name="price-checkbox" value="300"> ≤ 300 G </label>
+  <label onclick="handlePriceChange(event)" class="tag tagPrice" data-tag="400"><input type="radio" id="400" style="margin-left: -1rem; width: 0;" name="price-checkbox" value="400"> ≤ 400 G </label>
+  <label onclick="handlePriceChange(event)" class="tag tagPrice" data-tag="500"><input type="radio" id="500" style="margin-left: -1rem; width: 0;" name="price-checkbox" value="500"> 400+ </label>
 
-
+<!--  <button class="tag" data-tag="0">Free</button>-->
+<!--  <button class="tag" data-tag="100"> ≤ 100 </button>-->
+<!--  <button class="tag" data-tag="200"> ≤ 200 </button>-->
+<!--  <button class="tag" data-tag="300"> ≤ 300 </button>-->
+<!--  <button class="tag" data-tag="400"> ≤ 400 </button>-->
+<!--  <button class="tag" data-tag="500"> 400+ </button>-->
 </div>
+<!--  </form>-->
+
+  </div>
 
 <div class="side-bar">
   <a href="https://ni0j.github.io/game-logs/entries/entry3/" class="active">Wishlist</a>
