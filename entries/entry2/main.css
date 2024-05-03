@@ -233,7 +233,7 @@ margin-bottom: 3rem;
 .side-bar{
   position: fixed;
   top:9.25rem;
-  right: -7.5rem;
+  right: -9rem;
   display: flex;
 width: 18.125rem;
 height: 1.6875rem;
@@ -394,7 +394,7 @@ margin: 0;
 .side-bar{
   position: fixed;
   top:9.25rem;
-  right: -7.5rem;
+  right: -9rem;
   display: flex;
 width: 18.125rem;
 height: 1.6875rem;
@@ -629,7 +629,7 @@ font-size: 0.75rem;
   .side-bar{
     position: fixed;
     top:9.25rem;
-    right: -7.5rem;
+    right: -9rem;
     display: flex;
   width: 18.125rem;
   height: 1.6875rem;
@@ -759,7 +759,7 @@ font-size: 0.75rem;
   .side-bar{
     position: fixed;
     top:9.25rem;
-    right: -7.5rem;
+    right: -9rem;
     display: flex;
   width: 18.125rem;
   height: 1.6875rem;
