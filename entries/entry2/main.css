@@ -233,9 +233,9 @@ margin-bottom: 3rem;
 .side-bar{
   position: fixed;
   top:9.25rem;
-  right: -7.5rem;
+  right: -9rem;
   display: flex;
-width: 15.125rem;
+width: 18.125rem;
 height: 1.6875rem;
 transform: rotate(90deg);
 padding: 0.625rem 1.25rem;
@@ -394,9 +394,9 @@ margin: 0;
 .side-bar{
   position: fixed;
   top:9.25rem;
-  right: -7.5rem;
+  right: -9rem;
   display: flex;
-width: 15.125rem;
+width: 18.125rem;
 height: 1.6875rem;
 transform: rotate(90deg);
 padding: 0.625rem 1.25rem;
@@ -629,9 +629,9 @@ font-size: 0.75rem;
   .side-bar{
     position: fixed;
     top:9.25rem;
-    right: -7.5rem;
+    right: -9rem;
     display: flex;
-  width: 15.125rem;
+  width: 18.125rem;
   height: 1.6875rem;
   transform: rotate(90deg);
   padding: 0.625rem 1.25rem;
@@ -759,9 +759,9 @@ font-size: 0.75rem;
   .side-bar{
     position: fixed;
     top:9.25rem;
-    right: -7.5rem;
+    right: -9rem;
     display: flex;
-  width: 15.125rem;
+  width: 18.125rem;
   height: 1.6875rem;
   transform: rotate(90deg);
   padding: 0.625rem 1.25rem;
